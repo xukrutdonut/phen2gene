@@ -1,0 +1,24 @@
+# Output directories
+output/
+out/
+input/
+
+# Docker artifacts
+.docker/
+
+# Temporary files
+*.tmp
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
