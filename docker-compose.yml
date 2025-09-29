@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  phen2gene:
+    build: .
+    image: phen2gene-rpi:latest
+    container_name: phen2gene
+    volumes:
+      # Mount a local directory for output files
+      - ./output:/app/out
+      # Optionally mount input files directory
+      - ./input:/app/input:ro
+    # Override the default command to wait for user input
+    # Remove this line to use default help output
+    # command: ["-h"]
+    
+    # Example: Run with specific HPO terms
+    # command: ["-m", "HP:0000252", "HP:0000365", "-v", "-out", "/app/out/"]
+    
+    # Example: Run with input file
+    # command: ["-f", "/app/input/hpo_terms.txt", "-v", "-out", "/app/out/"]
